@@ -62,7 +62,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #fff;
+  --bs-body-color: rgb(233, 106, 106);
   --bs-body-bg: #222;
 }
 
@@ -292,8 +292,8 @@ a > code {
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
-  color: #fff;
-  background-color: #222;
+  color: rgb(214, 16, 16);
+  background-color: rgb(109, 102, 102);
   border-radius: 0.2rem;
 }
 
