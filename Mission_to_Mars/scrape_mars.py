@@ -2,7 +2,7 @@
 from splinter import Browser
 from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
-import datetime as dt
+
 
 #scrape all function
 def scrape_all():
@@ -21,8 +21,7 @@ def scrape_all():
         "newsParagraph" : article_p,
         "featuredImage" : scrape_featured_image(browser),
         "facts" : scrape_facts_page(browser),
-        "hemispheres" : scrape_hemispheres (browser),
-        "lastUpdated" : dt.datetime.now()
+        "hemispheres" : scrape_hemispheres (browser)
     }
 
     #stop webdriver
@@ -51,7 +50,7 @@ def scrape_news(browser):
 #scrape through the featured image page
 def scrape_featured_image(browser):
     #visit the URL
-    image_url = 'https://spaceimages-mars.com'
+    image_url = 'https://spaceimages-mars.com/'
     browser.visit(image_url)
     html = browser.html
 

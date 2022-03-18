@@ -337,7 +337,7 @@ td,
 th {
   border-color: inherit;
   border-style: solid;
-  border-width: 0;
+  border-width: 3;
 }
 
 label {
@@ -1900,7 +1900,7 @@ progress {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #fff;
-  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-striped-bg: #fff(0, 0, 0, 0.05);
   --bs-table-active-color: #fff;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
   --bs-table-hover-color: #fff;
@@ -1909,7 +1909,7 @@ progress {
   margin-bottom: 1rem;
   color: #fff;
   vertical-align: top;
-  border-color: #444;
+  border-color: rgb(236, 233, 233);
 }
 
 .table > :not(caption) > * > * {
@@ -1979,7 +1979,7 @@ progress {
   --bs-table-hover-bg: #466689;
   --bs-table-hover-color: #fff;
   color: #fff;
-  border-color: #4b6b8c;
+  border-color: #edeff1;
 }
 
 .table-secondary {

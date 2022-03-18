@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>All About the Red Planet: Mars</title>
-  <link rel="stylesheet" type ="text/css" href="bootstrap_darkly.css"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap_darkly.css') }}" />
 </head>
 
 <body>
@@ -16,31 +16,34 @@
     <div class="jumbotron text-center">
       <h1>Find information about Mars such as...</h1>
       <br>
-      <h3>What is the latest news about Mars? 
-      <h3>What are some fun facts about Mars? </h3>
-      <h3>What does Mars look like? </h3>
-      </h3>
+      <h2>What is the latest news about Mars? </h2>
+      <h2>What are some fun facts about Mars? </h2>
+      <h2>What does Mars look like? </h2>
       <br>
       <p><a class="btn btn-primary btn-danger" href="/scrape" role="button">Get the Latest Information!</a></p>
     </div>
   </div>
-    
+  <pre> 
+  </pre>
     <!-- Section for Mars News -->
     <div class="row" id="Latest Mars News">
       <div class="col-md-12 ">
         <div class="media">
-          <div class="media-body">
+          <div class="media-body" style="text-align:center">
             <h3>Latest Mars News</h3>
+            <br>
             <h4 class="media-heading">{{mars.newsTitle}}</h4>
             <p>{{mars.newsParagraph}}</p>
           </div>
         </div>
       </div>
     </div>
+    <pre> 
 
+    </pre>
     <!-- Featured Image and Facts Table -->
     <div class="row" id = "mars-featured-image">
-      <div class="col-md-8">
+      <div class="col-md-6 offset-.5" style="text-align:center" >
         <h3>Featured Mars Image</h3>
         <div class="thumbnail">
             <!-- In case the featured image is unresponsive -->
@@ -49,21 +52,27 @@
       
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 offset-1">
         <!-- Mars Facts Table -->
-        <div class = "row" id="mars-facts">
+        <div class = "row" id="mars-facts" style="text-align:center">
           <h3>Fun Facts About Mars</h3>
-          {{ mars.facts | safe }}
+          <div class="table-light">
+            <table border = "1" class="dataframe">
+             {{ mars.facts | safe }}
+            </table>
+          </div>
         </div>
       </div>
-
+      <pre> 
+      </pre>
+      
       <!-- Hemispheres Section -->
       {% for hemispheres in mars.hemispheres %}
       <div class="col-md-3">
         <div class="thumbnail">
-          <img src="{{hemispheres.img_url | default('static/images/error.png', true)}}" alt="...">
-          <div class="caption">
-            <h3>{{hemispheres.title}}</h3>
+          <img src="{{hemispheres.img_url}}" width="300" height="300" alt="...">
+          <div class="caption" style="text-align:center">
+            <h5>{{hemispheres.title}}</h5>
           </div>
         </div>
       </div>
