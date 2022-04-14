@@ -21,6 +21,7 @@ Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, an
 * Visited the astrogeology site [here](https://marshemispheres.com/) to obtain high resolution images for each of Mar's hemispheres.
 
 
+
 ## Step 2 - MongoDB and Flask Application
 
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
@@ -31,7 +32,12 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 * Stored the return value in Mongo as a Python dictionary.
 
+![image](https://user-images.githubusercontent.com/90559756/163394000-e13be3c6-c4aa-42ca-9870-51ab37271f33.png)
+
 * Created a root route `/` that will query the Mongo database and pass the mars data into an HTML template to display the data.
 
 * Created a template HTML file called `index.html` that takes the mars data dictionary and display all of the data in the appropriate HTML elements. 
+
+![image](https://user-images.githubusercontent.com/90559756/163393746-ce5574e4-3b83-4fd8-875b-66bfd07feea6.png)
+
 
